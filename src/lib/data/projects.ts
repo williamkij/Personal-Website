@@ -30,7 +30,7 @@ export const projects: Project[] = [
 			'To enhance human connection in hospital scenarios, providing tangible interaction devices between patients and healthcare professionals to address potentially conflicting issues and needs of both parties.',
 		tags: ['Yo-Yo Machines', 'Interactive Environment', 'Healthcare', 'ESPS32S'],
 		thumbnail: '/images/projects/Qlight.jpg',
-		video: '/images/projects/Qlight+EZmenu Interactive environment.mp4',
+		video: '/images/projects/ezmenu.mp4',
 		images: [],
 links: [
     { label: 'View Project', href: '/projects/ez-menu-qlight' },
