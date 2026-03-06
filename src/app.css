@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply bg-surface text-stone-800 font-sans antialiased;
+	}
+
+	::selection {
+		@apply bg-accent/20;
+	}
+}
+
+@layer components {
+	/* Project card hover effect */
+	.project-card {
+		@apply transition-all duration-300 ease-out;
+	}
+	.project-card:hover {
+		@apply -translate-y-2 shadow-lg;
+	}
+
+	/* Playground grid item */
+	.playground-item {
+		@apply relative overflow-hidden rounded-xl;
+	}
+	.playground-item::after {
+		content: '';
+		@apply absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300;
+	}
+	.playground-item:hover::after {
+		@apply opacity-100;
+	}
+.flip-container {
+	perspective: 500px;
+}
+.flip-container .flip-inner {
+	transform-style: preserve-3d;
+	transition: transform 0.7s ease;
+	transform: rotateY(0deg);
+}
+.flip-container:hover .flip-inner {
+	transform: rotateY(180deg);
+}
+}
+@keyframes scroll-right {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+@keyframes scroll-left {
+	0% { transform: translateX(-50%); }
+	100% { transform: translateX(0); }
+}
+.animate-scroll-right {
+	animation: scroll-right 20s linear infinite;
+}
+.animate-scroll-left {
+	animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-up {
+	0% { transform: translateY(0); }
+	100% { transform: translateY(-50%); }
+}
+@keyframes scroll-down {
+	0% { transform: translateY(-50%); }
+	100% { transform: translateY(0); }
+}
+.animate-scroll-up {
+	animation: scroll-up 15s linear infinite;
+}
+.animate-scroll-down {
+	animation: scroll-down 15s linear infinite;
+}
+.scroll-mouse-outline {
+	stroke: #57534e;
+	stroke-dasharray: 120;
+	stroke-dashoffset: 0;
+	animation: mouse-outline 2.5s ease-in-out infinite;
+}
+.scroll-mouse-dot {
+	fill: #57534e;
+	animation: mouse-dot 2.5s ease-in-out infinite;
+}
+@keyframes mouse-outline {
+	0% { stroke-dashoffset: 0; opacity: 1; }
+	70% { stroke-dashoffset: 0; opacity: 1; }
+	100% { stroke-dashoffset: 120; opacity: 0; }
+}
+@keyframes mouse-dot {
+	0% { transform: translateY(0); opacity: 0; }
+	15% { opacity: 1; }
+	50% { transform: translateY(10px); opacity: 0; }
+	100% { transform: translateY(10px); opacity: 0; }
+}
