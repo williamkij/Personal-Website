@@ -45,7 +45,7 @@ links: [
 			'This project is to design a dedicated mobile app for older people that aims to increase the connection between older people and society. And to enable older people to self-report their well-being data in a non-intrusive way.',
 		tags: ['SocialDesign', 'BigData', 'MentalHealth', 'InclusiveDesign','Application','FullStack'],
 		thumbnail: '/images/projects/eldome.jpg',
-		video: 'https://www.youtube.com/embed/https://www.youtube.com/watch?v=tcnB0e-FEgo',
+		video: 'https://www.youtube.com/embed/tcnB0e-FEgo?si=gDmW82Y5tNcOgpd6',
 		images: [],
 		links: [
 			{ label: 'View Report', href: 'https://drive.google.com/file/d/18NMg2Zrwss0wtDHvrzws50f9X5ahZWKF/view' },
