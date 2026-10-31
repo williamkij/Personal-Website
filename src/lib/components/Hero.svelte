@@ -1,5 +1,6 @@
 <script lang="ts">
   import { personalInfo } from "@/data/site";
+  import HoverPreviewLink from './HoverPreviewLink.svelte';
 </script>
 
 <section class="pt-44 pb-20 px-6">
@@ -40,17 +41,78 @@
     </div>
 
     <!-- Bio text -->
-    <p class="font-display text-lg md:text-xl leading-relaxed text-stone-500">
-      I'm Yue(Memphis)Jin, an
-      <strong class="font-semibold text-stone-800">HCI researcher</strong> and
-      <strong class="font-semibold text-stone-800">designer-engineer</strong>
-      with a passion for
-      <strong class="font-semibold text-stone-800">Tangible Devices</strong>.
-      I'm currently pursuing a MA-Digital Studies(Extended Reality Track) at
-      UChicago. My research interests include human-computer integration,
-      haptics, tangible interaction, and fabrication. Previously, I focused on
-      product Development and interaction design.
-    </p>
+
+<!-- Bio text -->
+
+
+
+
+
+<p class="font-sans text-base md:text-lg leading-[1.8] text-stone-600 text-left max-w-3xl mx-auto">
+  I'm Memphis Yue Jin, a second-year M.A. student in Digital Studies at the
+
+  <HoverPreviewLink
+  label="University of Chicago"
+  href="https://digitalstudies.uchicago.edu/"
+  previewTitle="Digital Studies at UChicago"
+  previewText="An interdisciplinary graduate program exploring digital media, computation, and technology in the humanities."
+  previewImage="website"
+/>
+,
+  conducting research in the
+
+  <HoverPreviewLink
+  label="Actuated Experience Lab (AxLab)"
+  href="https://www.axlab.cs.uchicago.edu/"
+  previewTitle="Actuated Experience Lab"
+  previewText="Exploring new forms of physical interaction through actuation, tangible interfaces, and interactive systems."
+  previewImage="/images/previews/axlab-preview.webp"
+/>
+
+  advised by
+
+
+
+  <HoverPreviewLink
+  label="Prof. Ken Nakagaki"
+  href="https://www.ken-nakagaki.com/"
+  previewTitle="Ken Nakagaki"
+  previewText="Assistant Professor of Computer Science at the University of Chicago and Director of AxLab."
+  previewType="image"
+  previewImage="/images/previews/ken.png"
+/>
+
+
+,
+  with additional guidance from my thesis counsellor,
+
+  <HoverPreviewLink
+  label="Prof. Jeffrey R. Tharsen"
+  href="https://voices.uchicago.edu/corpus/people/jeffrey-tharsen/"
+  previewTitle="Jeffrey R. Tharsen"
+  previewText="University of Chicago scholar working across digital humanities, computational methods, and interdisciplinary research."
+/>
+.
+
+  I received my B.IT. in User Experience Design from the
+  <strong class="font-semibold text-stone-800">University of Queensland, Australia</strong>
+  in 2024. My research focuses on
+  <strong class="font-semibold text-stone-800">Human-Computer Interaction,
+  Tangible Interaction, and Haptics</strong>,
+  particularly exploring how
+  <strong class="font-semibold text-stone-800">actuated and tangible interfaces</strong>
+  can enable expressive physical interactions.
+
+  More broadly, I'm interested in exploring how
+  <strong class="font-semibold text-stone-800">intelligent physical interfaces</strong>
+  and ubiquitous computing can enable more natural and intuitive interactions
+  beyond traditional screens.
+</p>
+
+
+
+
+
     <div class="mt-20">
       <svg width="18" height="30" viewBox="0 0 24 40" class="scroll-mouse">
         <rect
