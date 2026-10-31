@@ -10,7 +10,7 @@ export const siteConfig = {
 
 export const personalInfo: PersonalInfo = {
 	name: 'Memphis',
-	title: 'HCI Researcher & Designer',
+	title: 'HCI Researcher & Design Engineer',
 	email: 'yuejin1@uchicago.edu',
 	location: 'Chicago, IL',
 	bio: `I'm Memphis, an **HCI researcher** and **designer** with a background in human-computer interaction. I completed my undergraduate studies at the University of Queensland and am currently pursuing graduate work at the University of Chicago. My research interests include interactive systems, user experience design, and emerging technologies.`,
@@ -24,6 +24,5 @@ export const personalInfo: PersonalInfo = {
 
 export const navLinks: NavLink[] = [
 	{ label: 'Works', href: '/#featured-works' },
-	{ label: 'CV', href: '/cv' },
 	{ label: 'About', href: '/about' }
 ];

@@ -1,7 +1,7 @@
+
 <script lang="ts">
   import { personalInfo } from "@/data/site";
   import { Separator } from "@/components/ui/separator";
-  import { Button } from "@/components/ui/button";
 </script>
 
 <svelte:head>
@@ -10,22 +10,24 @@
 
 <section class="pt-32 pb-16 px-6">
   <div class="max-w-3xl mx-auto">
+
     <!-- Header -->
     <div class="flex flex-col md:flex-row items-start gap-8 mb-12">
       <div class="shrink-0">
-        <div
-          class="w-40 h-40 rounded-2xl overflow-hidden bg-stone-200 shadow-sm"
-        >
-          <img
-            src={personalInfo.avatar}
-            alt={personalInfo.name}
-            class="w-full h-full object-cover"
-            onerror={(e: Event) => {
-              (e.currentTarget as HTMLImageElement).style.display = "none";
-            }}
-          />
+        <div class="w-40 h-40 rounded-2xl overflow-hidden bg-stone-200 shadow-sm">
+ 
+<img
+src="/images/photo-back.jpg"
+alt={personalInfo.name}
+class="w-full h-full object-cover"
+onerror={(e: Event) => {
+  (e.currentTarget as HTMLImageElement).style.display = "none";
+}}
+/>
+
         </div>
       </div>
+
       <div>
         <h1 class="font-display text-4xl italic text-stone-800 mb-2">
           About Me
@@ -37,159 +39,376 @@
 
     <Separator class="my-8" />
 
-    <!-- Bio -->
-    <div class="prose prose-stone max-w-none">
-      <h2 class="font-display text-2xl italic text-stone-800 mb-4">Bio</h2>
-      <p class="text-stone-700 leading-relaxed text-lg">
-        I am an HCI researcher and designer–engineer. My interests lie in
-        exploring the space between the physical and digital worlds, with a
-        focus on embodied interaction and how physical experiences can enhance
-        people's everyday lives. I am currently pursuing an interdisciplinary
-        master's degree in the Digital Studies program at the University of
-        Chicago. Previously, I studied product design and technology interaction
-        in Australia and Switzerland.
+    <!-- Personal Story -->
+    <div class="space-y-5">
+
+      <p class="text-stone-700 text-base md:text-lg leading-[1.8]">
+        Hi, I'm Memphis, an HCI researcher from China with a background
+        spanning
+        <strong class="font-semibold text-stone-800">
+          computer science, design, engineering, and the humanities
+        </strong>.
       </p>
-      <p
-        class="text-stone-900 leading-relaxed text-lg italic font-semibold mt-6"
-      >
-        "I believe that the machines and technological artifacts around us
-        should be understood as extensions of human thinking and action, rather
-        than systems that diminish human agency or well-being."
+
+      <p class="text-stone-700 text-base md:text-lg leading-[1.8]">
+        Growing up, I was fascinated by
+        <strong class="font-semibold text-stone-800">Iron Man</strong>
+        and
+        <strong class="font-semibold text-stone-800">Star Trek</strong>.
+        I dreamed of a world where we could interact with technology freely,
+        without being tied to screens or conventional devices.
+      </p>
+
+      <p class="text-stone-700 text-base md:text-lg leading-[1.8]">
+        I started out studying computer science, but something felt missing.
+        It wasn't until I stumbled upon an introductory
+        <strong class="font-semibold text-stone-800">
+          Human-Computer Interaction
+        </strong>
+        course that I realized what I had been looking for all along.
+      </p>
+
+      <p class="text-stone-700 text-base md:text-lg leading-[1.8]">
+        In Australia, I explored different corners of HCI and discovered
+        my passion for
+        <strong class="font-semibold text-stone-800">
+          embodied and tangible interaction
+        </strong>.
+        Years later, in the US, I found myself working with
+        <a
+          href="https://www.ken-nakagaki.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-semibold text-stone-800"
+          style="text-decoration: underline; text-underline-offset: 4px;"
+        >Ken Nakagaki</a>,
+        whose
+        <a
+          href="https://doi.org/10.1145/2858036.2858104"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="italic text-stone-800"
+          style="text-decoration: underline; text-underline-offset: 4px;"
+        >Materiable</a>
+        project I had first encountered in that same introductory HCI course.
+        Funny how things come full circle!
+      </p>
+
+      <p class="text-stone-700 text-base md:text-lg leading-[1.8]">
+        Along the way, living and studying across
+        <strong class="font-semibold text-stone-800">
+          China, Australia, Switzerland, and the US
+        </strong>
+        has made me appreciate different perspectives and unexpected
+        connections. I believe the most exciting ideas happen when
+        different worlds collide, and that's exactly where I want to be.
+      </p>
+
+    </div>
+
+    <Separator class="my-10" />
+
+
+<!-- Education -->
+<div>
+  <h2 class="font-display text-2xl italic text-stone-800 mb-8">
+    Education
+  </h2>
+
+  <div class="space-y-10">
+
+    <!-- University of Chicago -->
+    <div>
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+        <h3 class="font-semibold text-stone-800 text-lg">
+          University of Chicago
+        </h3>
+        <span class="text-sm text-stone-400 whitespace-nowrap">
+          2025 – 2027 (Expected)
+        </span>
+      </div>
+
+      <p class="text-stone-700 mt-1">
+        <a
+          href="https://digitalstudies.uchicago.edu/overview/masters-program/digital-media/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="education-link"
+        >M.A. in Digital Studies</a>
+      </p>
+
+      <p class="text-sm text-stone-500 mt-1">
+        Digital Media & Extended Reality Track
+      </p>
+
+      <p class="text-sm text-stone-600 mt-2">
+        Research Advisor:
+        <a
+          href="https://www.ken-nakagaki.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="education-link"
+        >Prof. Ken Nakagaki</a>
+      </p>
+
+      <p class="text-sm text-stone-600 mt-3 leading-[1.8]">
+        <span class="font-medium text-stone-700">Coursework:</span>
+        Embodied AI Interfaces,
+        Actuated User Interfaces and Technology,
+        Human-Robot Interaction: Research and Practice,
+        Data Management for the Humanities,
+        Data Visualization for the Humanities.
       </p>
     </div>
 
-    <Separator class="my-8" />
-
-    <!-- Interests / What I Do -->
+    <!-- University of Queensland -->
     <div>
-      <h2 class="font-display text-2xl italic text-stone-800 mb-4">
-        Key Words
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+        <h3 class="font-semibold text-stone-800 text-lg">
+          University of Queensland, Australia
+        </h3>
+        <span class="text-sm text-stone-400 whitespace-nowrap">
+          2021 – 2024
+        </span>
+      </div>
+
+      <p class="text-stone-700 mt-1">
+        <a
+          href="https://study.uq.edu.au/study-options/programs/bachelor-information-technology-2570"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="education-link"
+        >Bachelor of Information Technology</a>
+      </p>
+
+      <p class="text-sm text-stone-500 mt-1">
+        Major in
+        <a
+          href="https://eecs.uq.edu.au/human-centred-computing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="education-link"
+        >User Experience Design</a>
+      </p>
+
+      <p class="text-sm text-stone-600 mt-3 leading-[1.8]">
+        <span class="font-medium text-stone-700">Coursework:</span>
+        Design Thinking,
+        Digital Prototyping and Extended Reality,
+        Social and Mobile Computing,
+        Physical Computing Studio,
+        Information Visualisation,
+        Design Computing Studio I, II, III
+        (Interactive Technology, Interaction Design, Build),
+        Discrete Mathematics,
+        Information Systems.
+      </p>
+    </div>
+
+<!-- University of Zurich -->
+<div>
+  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+    <h3 class="font-semibold text-stone-800 text-lg">
+      University of Zurich, Switzerland
+    </h3>
+    <span class="text-sm text-stone-400 whitespace-nowrap">
+      Jun – Aug 2022
+    </span>
+  </div>
+
+  <p class="text-stone-700 mt-1">
+    <a
+      href="https://www.blockchain.uzh.ch/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="education-link"
+    >UZH Blockchain Center</a>
+  </p>
+
+  <p class="text-sm text-stone-500 mt-1">
+    Summer Session in Blockchain Technology
+  </p>
+
+  <p class="text-sm text-stone-600 mt-3 leading-[1.8]">
+    <span class="font-medium text-stone-700">Coursework:</span>
+    Blockchain Technology,
+    Blockchain Law,
+    Human-Centered Blockchain.
+  </p>
+</div>
+
+
+  </div>
+</div>
+
+<Separator class="my-10" />
+    <!-- Research & Teaching -->
+    <div>
+      <h2 class="font-display text-2xl italic text-stone-800 mb-8">
+        Research & Teaching Experience
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div
-          class="p-5 rounded-xl bg-white border border-stone-200 flex items-start justify-between"
-        >
-          <div>
-            <h3 class="font-semibold text-stone-800 mb-1">Physical</h3>
-            <p class="text-sm text-stone-600">
-              Tangible Music, Yo-Yo Machine, CSCW
-            </p>
+
+      <div class="space-y-10">
+
+        <!-- AXLab -->
+        <div>
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+            <h3 class="font-semibold text-stone-800 text-lg">
+              Graduate Researcher
+            </h3>
+            <span class="text-sm text-stone-400 whitespace-nowrap">
+              2026 – Present
+            </span>
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="text-stone-400 shrink-0 ml-4"
-          >
-            <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v0"></path>
-            <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"></path>
-            <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path>
-            <path
-              d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"
-            ></path>
-          </svg>
+
+          <p class="text-stone-700 mt-1">
+            <a
+              href="https://www.axlab.cs.uchicago.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-stone-800"
+              style="text-decoration: underline; text-underline-offset: 4px;"
+            >Actuated Experience Lab (AxLab)</a>,
+            University of Chicago
+          </p>
+
+          <p class="text-sm text-stone-500 mt-2 leading-relaxed">
+            Exploring tangible and actuated interfaces through haptic interaction,
+            shape-changing Interfaces, and interactive systems. Developing authoring
+            tools and conducting user studies to investigate expressive physical
+            interactions.
+          </p>
         </div>
-        <div
-          class="p-5 rounded-xl bg-white border border-stone-200 flex items-start justify-between"
-        >
-          <div>
-            <h3 class="font-semibold text-stone-800 mb-1">Design</h3>
-            <p class="text-sm text-stone-600">
-              Ethical Design, Experience-Centered Design
-            </p>
+
+        <!-- Teaching -->
+        <div>
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+            <h3 class="font-semibold text-stone-800 text-lg">
+              Teaching Assistant
+            </h3>
+            <span class="text-sm text-stone-400 whitespace-nowrap">
+              2024
+            </span>
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="text-stone-400 shrink-0 ml-4"
-          >
-            <path
-              d="M12 20a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 11 5 13a7 7 0 0 0 7 7z"
-            ></path>
-          </svg>
+
+          <p class="text-stone-700 mt-1">
+            University of Queensland
+          </p>
+
+          <p class="text-sm text-stone-500 mt-1">
+            DECO3801/7381 Design Computing Studio 3: Build
+          </p>
+
+          <p class="text-sm text-stone-500 mt-2 leading-relaxed">
+            Mentored 24 students across four project groups,
+            supporting interaction design, user research,
+            and usability evaluation.
+          </p>
         </div>
-        <div
-          class="p-5 rounded-xl bg-white border border-stone-200 flex items-start justify-between"
-        >
-          <div>
-            <h3 class="font-semibold text-stone-800 mb-1">Software</h3>
-            <p class="text-sm text-stone-600">
-              Computational Interaction, Social-Mobile Computing
-            </p>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="text-stone-400 shrink-0 ml-4"
-          >
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
-        </div>
-        <div
-          class="p-5 rounded-xl bg-white border border-stone-200 flex items-start justify-between"
-        >
-          <div>
-            <h3 class="font-semibold text-stone-800 mb-1">Theoretical</h3>
-            <p class="text-sm text-stone-600">Philosophy, Security, Empathy</p>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="text-stone-400 shrink-0 ml-4"
-          >
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 16v-4"></path>
-            <path d="M12 8h.01"></path>
-          </svg>
-        </div>
+
       </div>
     </div>
 
-    <Separator class="my-8" />
+    <Separator class="my-10" />
 
-    <!-- Contact & Social -->
+   
+<!-- Selected Highlights -->
+<div>
+  <h2 class="font-display text-2xl italic text-stone-800 mb-8">
+    Selected Highlights
+  </h2>
+
+  <div class="space-y-7">
+
+    <!-- 2026 Scholarship -->
+    <div>
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+        <h3 class="font-semibold text-stone-800">
+          Merit Tuition Scholarship
+        </h3>
+        <span class="text-sm text-stone-400">2026</span>
+      </div>
+
+      <p class="text-sm text-stone-500 mt-1">
+        University of Chicago (50%, $34,272)
+      </p>
+    </div>
+
+    <!-- 2025 Scholarship -->
+    <div>
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+        <h3 class="font-semibold text-stone-800">
+          Merit Scholarship
+        </h3>
+        <span class="text-sm text-stone-400">2025</span>
+      </div>
+
+      <p class="text-sm text-stone-500 mt-1">
+        University of Chicago ($12,000)
+      </p>
+    </div>
+
+    <!-- South Side Science Festival -->
+    <div>
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+        <h3 class="font-semibold text-stone-800">
+          South Side Science Festival
+        </h3>
+        <span class="text-sm text-stone-400">2026</span>
+      </div>
+
+      <p class="text-sm text-stone-500 mt-1">
+        Research Demonstrator, Interactive Haptic Interfaces,
+        University of Chicago
+      </p>
+    </div>
+
+    <!-- Groove Music Cube -->
+    <div>
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+        <h3 class="font-semibold text-stone-800">
+          <a
+            href="https://www.eait.uq.edu.au/files/54989/2025%20EngDesCompArchPlan%20Study%20Guide.pdf#page=24"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="highlight-link"
+          >Groove Music Cube</a>
+        </h3>
+
+        <span class="text-sm text-stone-400">2025</span>
+      </div>
+
+      <p class="text-sm text-stone-500 mt-1 leading-relaxed">
+        Featured in the University of Queensland's
+        2025 Engineering, Design, Computing, Architecture and Planning
+        Undergraduate Programs Guide, p. 22.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+    <Separator class="my-10" />
+
+    <!-- Get in Touch -->
     <div>
       <h2 class="font-display text-2xl italic text-stone-800 mb-4">
         Get in Touch
       </h2>
+
       <p class="text-stone-600 mb-4">
         Feel free to reach out at
         <a
-          href="mailto:{personalInfo.email}"
+          href={`mailto:${personalInfo.email}`}
           class="text-accent hover:underline"
         >
           {personalInfo.email}
         </a>
       </p>
-      <div class="flex gap-3">
+
+      <div class="flex items-center gap-3 mb-6">
+
         <a
           href="https://github.com/williamkij"
           target="_blank"
@@ -204,6 +423,7 @@
             height="20"
           />
         </a>
+
         <a
           href="https://www.linkedin.com/in/yue-jin-106623250/"
           target="_blank"
@@ -218,7 +438,65 @@
             height="20"
           />
         </a>
+
       </div>
+
+
+<!-- Academic CV -->
+<div class="flex flex-wrap items-center gap-2">
+  <a
+    href="https://drive.google.com/file/d/1-xAEY74UI1zekbqVOInSVmvQfT7zRmLe/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="font-medium text-stone-800"
+    style="text-decoration: underline; text-underline-offset: 4px;"
+  >
+    Academic CV (PDF)
+  </a>
+
+  <span class="text-sm text-stone-400">
+    (Password available upon request)
+  </span>
+</div>
+
+
     </div>
+
   </div>
 </section>
+
+<style>
+  .education-link {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-color: #a8a29e;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition:
+      color 0.2s ease,
+      text-decoration-color 0.2s ease;
+  }
+
+  .education-link:hover {
+    color: #292524;
+    text-decoration-color: #292524;
+  }
+
+
+.highlight-link {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: #a8a29e;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.highlight-link:hover {
+  color: #292524;
+  text-decoration-color: #292524;
+}
+
+</style>
