@@ -1,5 +1,6 @@
 <script lang="ts">
   import Hero from "@/components/Hero.svelte";
+  import News from "@/components/News.svelte";
   import FeaturedProjects from "@/components/FeaturedProjects.svelte";
   import Playground from "@/components/Playground.svelte";
   import { onMount } from "svelte";
@@ -76,5 +77,6 @@
 ></canvas>
 
 <Hero />
+<News />
 <FeaturedProjects />
 <Playground />
